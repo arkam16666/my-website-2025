@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 
-.kanit-bold-italic {
+* {
   font-family: "Kanit", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+  font-weight: 400;
 }

@@ -1,8 +1,11 @@
 <script>
 	import Nav from '$lib/components/Navbar.svelte';
 </script>
-<div class="bg-blue-500 min-h-screen z-0 absolute w-full font-kani font-bold">
+<div class="bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 min-h-screen font-kani font-bold" >
 	<main>
-		<Nav />
+		<div>
+			
+			
+		</div>
 	</main>
 </div>
