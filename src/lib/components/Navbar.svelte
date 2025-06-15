@@ -1,17 +1,17 @@
 <script>
 	let ul = {
-		Home: "Home",
-		Skill: "Skill",
-		Project: "Project",
-		About: "About",
-		Game: "Game"
+		Home: "HOME",
+		Skill: "SKILL",
+		Project: "PROJECT",
+		About: "ABOUT",
+		Game: "GAME"
 	};
 
 	let isOpen = false;
 </script>
 
 
-<div class="w-full flex justify-center  px-4">
+<div class="w-full flex justify-center  px-4 fixed top-0 left-0 right-0 z-1">
 	<nav
 		class=" shadow-2xl mt-4 bg-transparent backdrop-blur-sm  rounded-3xl px-6 py-4 
                w-[75%] max-w-[90%] sm:max-w-[250px] md:max-w-[600px] lg:max-w-[700px] 
@@ -30,22 +30,22 @@
 		</div>
 
 		<!-- Nav items -->
-		<ul class={`mt-4 sm:mt-0 font-bold text-center sm:text-xl lg:text-2xl  text-black 
+		<ul class={`mt-4 sm:mt-0 text-center sm:text-xl lg:text-xl  text-black 
                     ${isOpen ? '' : 'hidden'} sm:flex sm:flex-row sm:justify-center sm:space-x-6 lg:space-x-20`}>
 			<li class="py-2 sm:py-0">
-				<a href="#Home" class="hover:text-blue-600 transition-colors duration-200 block">{ul.Home}</a>
+				<a href="#Home" class=" hover:text-cyan-500 transition-colors duration-300 block">{ul.Home}</a>
 			</li>
 			<li class="py-2 sm:py-0">
-				<a href="#Skill" class="hover:text-blue-600 transition-colors duration-200 block">{ul.Skill}</a>
+				<a href="#Skill" class="hover:text-cyan-500 transition-colors duration-300 block">{ul.Skill}</a>
 			</li>
 			<li class="py-2 sm:py-0">
-				<a href="#Project" class="hover:text-blue-600 transition-colors duration-200 block">{ul.Project}</a>
+				<a href="#Project" class="hover:text-cyan-500 transition-colors duration-300 block">{ul.Project}</a>
 			</li>
 			<li class="py-2 sm:py-0">
-				<a href="#About" class="hover:text-blue-600 transition-colors duration-200 block">{ul.About}</a>
+				<a href="#About" class="hover:text-cyan-500 transition-colors duration-300 block">{ul.About}</a>
 			</li>
 			<li class="py-2 sm:py-0">
-				<a href="#Game" class="hover:text-blue-600 transition-colors duration-200 block">{ul.Game}</a>
+				<a href="#Game" class="hover:text-cyan-500 transition-colors duration-300 block">{ul.Game}</a>
 			</li>
 		</ul>
 	</nav>

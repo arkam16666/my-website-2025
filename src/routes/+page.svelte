@@ -1,11 +1,15 @@
 <script>
 	import Nav from '$lib/components/Navbar.svelte';
 </script>
-<div class="bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 min-h-screen font-kani font-bold" >
-	<main>
-		<div>
-			
-			
-		</div>
+
+<div class="font-kani min-h-screen bg-gradient-to-b to-cyan-100 font-bold">
+	<main class="container">
+		<p class=" text-black">Hello 👋 I'm</p>
+		<section class="animation">
+			<div class="first"><div>Carlos Córdova</div></div>
+			<div class="second"><div>Web Developer</div></div>
+			<div class="third"><div>Software Engineer</div></div>
+		</section>
 	</main>
 </div>
+<div class=" h-100"></div>
