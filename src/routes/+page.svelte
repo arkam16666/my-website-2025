@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-
-	let text = "MY NAME IS THANADON";
+	import { fly } from 'svelte/transition';
+	let text = 'MY NAME IS THANADON';
 	let displayedText = '';
 	let index = 0;
 	let isDeleting = false;
@@ -36,21 +36,28 @@
 	}
 </script>
 
-<div class="font-kanit min-h-screen bg-gradient-to-b from-white to-cyan-100/75 font-bold mt-49 flex justify-center text-center">
+<div
+	class="font-kanit mt-49 flex h-[78.5vh] justify-center bg-gradient-to-b from-white to-cyan-100/75 text-center font-bold"
+>
 	<main class="w-96">
-		<p class="text-2xl text-cyan-500 ">
-			{displayedText}<span class="border-r-1 border-cyan-500 animate-pulse ml-1"></span>
+		<p class="text-2xl text-cyan-500">
+			{displayedText}<span class="ml-1 animate-pulse border-r-1 border-cyan-500"></span>
 		</p>
-			<p class="w-full mt-7 ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti distinctio quam necessitatibus magni soluta nulla nisi eos totam, doloribus quaerat!</p>
-			<div class="flex justify-center  mt-12">
-				<div class="ring-container ">
-					<div class="rotating-ring "></div>
-					<img class="rounded-full border-4 border-white shadow-xl" width="200px" src="/favicon.png"  alt="">
-				</div>
+		<p class="mt-7 w-full">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti distinctio quam
+			necessitatibus magni soluta nulla nisi eos totam, doloribus quaerat!
+		</p>
+		<div class="mt-12 flex justify-center">
+			<div class="ring-container" data-aos="zoom-out">
+				<div class="rotating-ring" ></div>
+				<img
+					src="/favicon.png"
+					alt="Logo"
+					width="200"
+					data-aos="zoom-out"
+					class="rounded-full border-4 border-white shadow-xl transition duration-300 ease-in-out"
+				/>
 			</div>
-			<div class="mt-56">
-				<div class="text-7xl arrow-down "></div>
-			</div>
+		</div>
 	</main>
 </div>
-<div class="h-100"></div>

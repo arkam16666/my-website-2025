@@ -11,7 +11,7 @@
 </script>
 
 
-<div class="w-full flex justify-center px-4 fixed top-0 left-0 right-0 z-1">
+<div class="w-full flex justify-center px-4 fixed top-0 left-0 right-0 z-1" data-aos="fade-down">
 	<nav
 		class=" shadow-2xl mt-4 bg-transparent backdrop-blur-sm  rounded-3xl px-6 py-4 
                w-[75%] max-w-[90%] sm:max-w-[250px] md:max-w-[600px] lg:max-w-[700px] 

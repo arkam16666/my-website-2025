@@ -19,5 +19,18 @@
 <script>
 
 </script>
+<!-- ✅ โหลด AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    once: true,         // ทำให้เล่น animation แค่ครั้งเดียว
+    delay: 90,         // (ms) หน่วงนิดหน่อยตอนโหลด
+    duration: 1000,      // (ms) ความเร็วของ animation
+    easing: 'ease-in-out',
+    offset: 0           // ✅ ทำให้เริ่ม animation เลย ไม่ต้อง scroll
+  });
+</script>
 
 </html>
