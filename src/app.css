@@ -5,49 +5,77 @@
   font-weight: 300;
 }
 
-p {
-  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
-}
-.container {
-  color: #e5e5e5;
-  font-size: 2.26rem;
-  text-transform: uppercase;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.ring-container {
+		position: relative;
+		width: 220px;
+		height: 220px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-.animation {
-  height:50px;
-  overflow:hidden;
-  margin-left: 1rem;
-  
-}
+	.rotating-ring {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: 5px solid transparent;
+		border-top: 6px solid #00bcd4;
+		border-radius: 100%;
+		animation: spin 4s linear infinite;
+	}
 
-.animation > div > div {
-  
-  padding: 0.25rem 0.75rem;
-  height:2.81rem;
-  margin-bottom: 3rem;
-  display:inline-block;
-}
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
 
-.animation div:first-child {
-  animation: text-animation 8s infinite;
-}
+  .arrow-down {
+		position: relative;
+		margin: 0 auto;
+		animation: bounceDown 2s infinite;
+	}
 
+	.arrow-down::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 10px;
+		height: 10px;
+		border-left: 3px solid #06b6d4;
+		border-bottom: 3px solid #06b6d4;
+		transform: rotate(-45deg);
+		transform-origin: center;
+	}
 
+	@keyframes bounceDown {
+		0%, 20%, 50%, 80%, 100% {
+			transform: translateY(0);
+		}
+		40% {
+			transform: translateY(8px);
+		}
+		60% {
+			transform: translateY(4px);
+		}
+	}
+   .underline-hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
 
-@keyframes text-animation {
-  0% {margin-top: 0;}
-  10% {margin-top: 0;}
-  20% {margin-top: -5.62rem;}
-  30% {margin-top: -5.62rem;}
-  40% {margin-top: -11.24rem;}
-  60% {margin-top: -11.24rem;}
-  70% {margin-top: -5.62rem;}
-  80% {margin-top: -5.62rem;}
-  90% {margin-top: 0;}
-  100% {margin-top: 0;}
-}
+  .underline-hover:hover::after {
+    transform: scaleX(1);
+  }
